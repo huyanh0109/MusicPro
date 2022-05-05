@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="?attr/actionBarSize"
+    tools:context=".ui.home.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/RelativeSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colerSearch">
+
+        <SearchView
+            android:id="@+id/searchVoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_customsearchvoice"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search people &amp; places"
+            app:queryBackground="@null"
+
+            app:submitBackground="@null" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeBanner"
+        android:layout_width="match_parent"
+        android:layout_height="209dp"
+        android:layout_below="@+id/RelativeSearch">
+
+        <ImageView
+            android:id="@+id/img_bannermusic"
+            android:layout_width="match_parent"
+            android:layout_height="209dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_banner"></ImageView>
+
+        <ImageView
+            android:id="@+id/img_avatarmusic"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:layout_alignBottom="@+id/img_bannermusic"
+            android:layout_margin="22dp"
+            android:src="@drawable/img_avatarmusic">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tv_namemusicbanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_contentmusicbanner"
+            android:layout_marginBottom="5dp"
+            android:layout_toRightOf="@id/img_avatarmusic"
+            android:text="Giai Điệu Sôi Động"
+            android:textColor="@color/white"
+            android:textSize="25dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_contentmusicbanner"
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/img_bannermusic"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@id/img_avatarmusic"
+            android:text="Những giai điệu sôi đội  loanh quanh không
+thoát khỏi tâm trí người nghe"
+            android:textColor="@color/white"
+            android:textSize="15dp">
+
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativePropose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RelativeBanner">
+
+        <TextView
+            android:id="@+id/tvPropose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/lato_thin"
+            android:text="Có Thể Bạn Muốn Nghe"
+            android:textSize="25dp"
+            android:textStyle="bold"></TextView>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/tvPropose"
+            android:src="@drawable/enterbutton"></ImageView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/tvPropose"></androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelativeListPlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/RelaytiveMusicControl"
+        android:layout_below="@+id/RelativePropose">
+
+        <TextView
+            android:id="@+id/tvListPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/lato_thin"
+            android:text="Danh Sách Phát"
+            android:textSize="25dp"
+            android:textStyle="bold"></TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/tvListPlay"></androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RelaytiveMusicControl"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_alignParentBottom="true"
+        android:background="#EEF3F0">
+
+        <TextView
+            android:id="@+id/tv_namemusic"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/img_imgmusic"
+            android:fontFamily="@font/bree_serif"
+            android:text="Over the Horizon- SamSung "
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_imgmusic"
+            android:layout_width="44dp"
+            android:layout_height="46dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:src="@drawable/img_avatarmusic" />
+
+        <ImageView
+            android:id="@+id/btn_premusic"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignRight="@+id/btn_playmusic"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="42dp"
+            android:src="@drawable/prebutton" />
+
+        <ImageView
+            android:id="@+id/btn_playmusic"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignRight="@+id/btn_nextmusic"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="42dp"
+            android:src="@drawable/playbutton" />
+
+        <ImageView
+            android:id="@+id/btn_nextmusic"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/nextbutton" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Welcome"
+    android:gravity="center"
+    android:background="@mipmap/imgsnap">
+
+    <TextView
+        style="@style/textsnap"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:width="113dp"
+        android:height="34dp"
+        android:fontFamily="@font/abril_fatface"
+        android:text="Music Pro"
+        android:textAlignment="center" />
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+<ImageView
+    android:id="@+id/img_itempropose"
+    android:layout_width="113dp"
+    android:scaleType="fitXY"
+    android:src="@drawable/img_avatarmusic"
+    android:layout_height="120dp">
+</ImageView>
+    <TextView
+        android:id="@+id/tv_itemnamemusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Music"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:layout_margin="20dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/bree_serif"
+        android:layout_alignBottom="@+id/img_itempropose"
+        android:gravity="center">
+
+    </TextView>
+
+
+</RelativeLayout>
