@@ -4,85 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="?attr/actionBarSize"
-    tools:context=".ui.home.HomeFragment">
+    android:orientation="vertical"
+    android:background="@drawable/background_allmusic"
 
-    <RelativeLayout
-        android:id="@+id/RelativeSearch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorSearch">
-
-        <SearchView
-            android:id="@+id/searchVoice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="@drawable/shape_customsearchvoice"
-            android:iconifiedByDefault="false"
-            android:queryHint="Search people &amp; places"
-            app:queryBackground="@null"
-
-            app:submitBackground="@null" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/RelativeBanner"
-        android:layout_width="match_parent"
-        android:layout_height="209dp"
-        android:layout_below="@+id/RelativeSearch">
-
-        <ImageView
-            android:id="@+id/img_bannermusic"
-            android:layout_width="match_parent"
-            android:layout_height="209dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/img_banner"></ImageView>
-
-        <ImageView
-            android:id="@+id/img_avatarmusic"
-            android:layout_width="67dp"
-            android:layout_height="67dp"
-            android:layout_alignBottom="@+id/img_bannermusic"
-            android:layout_margin="22dp"
-            android:src="@drawable/img_avatarmusic">
-
-        </ImageView>
-
-        <TextView
-            android:id="@+id/tv_namemusicbanner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/tv_contentmusicbanner"
-            android:layout_marginBottom="5dp"
-            android:layout_toRightOf="@id/img_avatarmusic"
-            android:text="Giai Điệu Sôi Động"
-            android:textColor="@color/white"
-            android:textSize="25dp">
-
-        </TextView>
-
-        <TextView
-            android:id="@+id/tv_contentmusicbanner"
-            android:layout_width="272dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/img_bannermusic"
-            android:layout_marginBottom="20dp"
-            android:layout_toRightOf="@id/img_avatarmusic"
-            android:text="Những giai điệu sôi đội  loanh quanh không
-thoát khỏi tâm trí người nghe"
-            android:textColor="@color/white"
-            android:textSize="15dp">
-
-        </TextView>
-    </RelativeLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_below="@+id/RelativeBanner"
+    tools:context=".AllMusic">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:orientation="vertical"
+        android:layout_above="@+id/RelaytiveMusicControl"
+        android:background="#BFFFFFFF">
 
+    <ImageView
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/btn_back"
+        />
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="186dp"
+        android:layout_height="175dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/avatarmusic_allmusic"/>
+
+    <TextView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/bree_serif"
+        android:text="All Music"
+        android:textColor="#00050A"
+        android:textSize="25dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="350dp"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        />
+    </LinearLayout>
     <RelativeLayout
         android:id="@+id/RelaytiveMusicControl"
         android:layout_width="match_parent"
@@ -138,5 +99,4 @@ thoát khỏi tâm trí người nghe"
             android:layout_marginRight="10dp"
             android:src="@drawable/nextbutton" />
     </RelativeLayout>
-
 </RelativeLayout>

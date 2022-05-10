@@ -9,23 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MusicPro">
+        <activity android:name=".AllMusic" />
+        <activity
+            android:name=".DetailMusic"
+            android:exported="true" />
         <activity
             android:name=".MainMusic"
-            android:label="@string/title_activity_main_music"
             android:exported="true"
-            >
+            android:label="@string/title_activity_main_music">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.SEARCH" />
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".Welcome"
+        <activity
+            android:name=".Welcome"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <meta-data

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailMusic"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:id="@+id/img_background"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:src="@mipmap/imgsnap"
+        android:scaleType="fitXY"
+        >
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/linear_detail"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:background="@drawable/shape_detailmusic"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="400dp"
+        >
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/abril_fatface"
+            android:text="Mot buoc yeu van dam dau"
+            android:textColor="@color/white"
+            android:textSize="25dp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/bree_serif"
+            android:text="Mr siro"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:textSize="25dp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bree_serif"
+            android:text="0:53 | 2:42"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="@drawable/custom_clock"
+            android:layout_marginBottom="40dp"/>
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:progress="30"
+            android:thumbTint="@color/colorthumbtint"
+
+            android:layout_below="@id/linear_detail"
+            android:progressDrawable="@drawable/custom_seekbar"
+            >
+
+        </SeekBar>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/linear_control"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear_detail"
+        android:gravity="center_horizontal"
+        android:background="@color/black">
+
+        <LinearLayout
+            android:paddingBottom="10dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_marginRight="50dp"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/pre_detail"/>
+                <ImageView
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/pause_detail"/>
+
+                <ImageView
+                    android:layout_marginLeft="50dp"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/next_detail"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_margin="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/doublearrow_detail"/>
+                <ImageView
+                    android:layout_margin="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/loop_detail"/>
+
+                <TextView
+                    android:layout_margin="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/abril_fatface"
+                    android:text="ALL Song "
+                    android:textColor="@color/white"
+                    android:textSize="25dp" />
+                <ImageView
+
+                    android:layout_marginTop="18dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/smallarrow_detail"/>
+                <ImageView
+                    android:layout_margin="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/favorite_detail"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
